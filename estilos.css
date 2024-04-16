@@ -1,0 +1,123 @@
+body
+{
+color: #3b3b3b;
+font-family: helvetica, sans-serif;
+font-size: 11px;
+margin-top:0px; 
+margin-left:0px; 
+margin-right:0px; 
+margin-bottom:0px;
+}
+
+p
+{
+color: #3b3b3b;
+font-family: helvetica, sans-serif;
+font-size: 11px
+}
+
+h2
+{
+color: #3b3b3b;
+font-family: helvetica, sans-serif;
+font-size: 18px;
+text-align:left;
+}
+
+h3
+{
+color: #3b3b3b;
+font-family: helvetica, sans-serif;
+font-size: 15px;
+text-align:left;
+}
+
+h5
+{
+color: #3b3b3b;
+font-family: helvetica, sans-serif;
+font-size: 11px;
+text-align:center;
+}
+
+table
+{
+color: #3b3b3b;
+font-family: helvetica, sans-serif;
+font-size: 11px;
+}
+
+
+td
+{
+color: #3b3b3b;
+font-family: helvetica, sans-serif;
+font-size: 11px;
+text-align: left;
+padding:1px;
+}
+
+th
+{
+background-color: #dddddd;
+color: #3b3b3b;
+font-family:helvetica, sans-serif;
+font-size: 11px;
+text-align:left;
+padding:2px;
+}
+
+form
+{
+color: #3b3b3b;
+font-family: helvetica, sans-serif;
+font-size: 11px
+}
+
+textarea
+{
+color: #3b3b3b;
+font-family: helvetica, sans-serif;
+font-size: 11px;
+text-align:justify;
+padding:4px;
+}
+
+input
+{
+color: #3b3b3b;
+font-family: helvetica, sans-serif;
+font-size: 11px;
+padding:2px;
+}
+
+select
+{
+color: #3b3b3b;
+font-family: helvetica, sans-serif;
+font-size: 11px;
+width: 150px; 
+}
+
+.msj
+{
+font-size: 11px;
+width: 420px;
+}
+
+a:hover
+{
+color: #0066ff;
+font-family: helvetica, sans-serif;
+}
+
+a
+{
+color: #0066ff;
+font-family: helvetica, sans-serif;
+}
+
+hr
+{
+width:100%;
+}

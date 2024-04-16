@@ -1,0 +1,105 @@
+<?php
+
+ini_set('include_path', $_SERVER['DOCUMENT_ROOT'] . '/inc');
+
+require_once "errorhand.php";
+require_once "control_login.php";
+require_once "fechadmy.php";
+
+#######################    PERMISOS DE ENFERMERIA         ###################################
+
+$disabled="";
+
+if ($_COOKIE['usr_area'] == "Enfermería" || $_COOKIE['usr_area'] == "Supervisión Enfermería"){
+  $insert=true;
+  $disabled="";
+} else {
+  $insert=false;
+  $disabled = "disabled";
+}
+
+#######################     VERIFICAR SI LLEGAN DATOS DEL FORM DE CONSULTA (FILtrO)  #########
+
+if (isset($_POST['turno']) && isset($_POST['fecha'])){
+  $fecha_ymd = fechaymd($_POST['fecha']); 
+  $fecha = $_POST['fecha'];
+  
+  if ($_POST['turno'] == 'todos')
+    $sql= "Select * from reportes_enfermería where fecha='$fecha_ymd' order by id";
+  else
+    $sql= "Select * from reportes_enfermería where fecha='$fecha_ymd' and turno = '". $_POST['turno'] ."'";
+
+} else {
+  $fecha = date('d-m-Y');
+  $fecha_ymd = fechaymd(date('d-m-Y'));
+  $sql= "Select * from reportes_enfermería where fecha='$fecha_ymd' order by id";
+}
+
+$con = conectar();
+
+if ( ! $query = mysql_query($sql, $con)){
+  $texto = mysql_error();
+  trigger_error($texto ,E_USER_WARNING);
+  exit("Error en la consulta de datos de reportes de enfermería.");
+}
+
+$num_rows = mysql_num_rows($query);
+
+?>
+<html>
+<head>
+<script language='javascript'>if (history.forward(1)){location.replace(history.forward(1));}</script>
+<script language='javascript' src="js/sto.js"></script>
+<link rel='stylesheet' type='text/css' href='estilos/estilos.css'>
+<title><?=TITULO?></title>
+</head>
+<body oncontextmenu='return true' onload="sto(<? echo $_COOKIE['timeout']?>);" bgcolor="#eeeeee" style="margin:50px;">
+<h3 style=" text-decoration: underline">
+<img src="images/bluearrow.gif"> Reportes de Enfermería</h3>
+<form action="" name="form1" method="post" onsubmit='return vf();'>
+<b>Turno:</b> 
+<input type="radio" name="turno" value="todos" checked>Todos</input>
+<input type="radio" name="turno" value="mañana">Mañana</input>
+<input type="radio" name="turno" value="tarde">Tarde</input>
+<input type="radio" name="turno" value="noche">Noche</input>
+<b>Fecha:&nbsp;</b>
+<input type="text" name="fecha" value="<?= $fecha?>" size="10" style="text-align:center">
+<input type="submit" value="Consultar">
+<?php
+if(! $disabled)
+  echo "<input type='button' value='Nuevo reporte' onClick='window.location.replace(\"repenfadd.php\")'>";
+?>
+<input type="button" value="Cerrar" onClick="window.location.replace('principal.php')">
+</form>
+
+<div style='position:relative; top:25px; left:7px; right:0px'>
+
+<?
+if ($num_rows < 1){
+  if (isset($fecha)) 
+    echo "<p>No hay registros en la fecha solicitada y turno/s solicitados.</p>";
+#
+    echo "</div></body></html>";
+    exit;
+}
+
+while ($row = mysql_fetch_array($query)){
+  echo "<hr><br><img src='images/bullet.gif' width='8' height='8' align='baseline'> <b>Fecha:</b> &nbsp;";
+  echo fechadmy($row['fecha'])  . "<br>\n";
+  echo "<img src='images/bullet.gif' width='8' height='8' align='baseline'> <b>Turno:</b>&nbsp;";	
+  echo $row['turno']            . "<br>\n";
+  echo "<img src='images/bullet.gif' width='8' height='8' align='baseline'> <b>Reporte:</b>&nbsp;";	
+  echo "<blockquote>";
+  echo str_replace (chr(10) . chr(13), "<br>\n", $row['reporte'] ) . "<br>\n";
+  echo "</blockquote>";
+  echo "<img src='images/bullet.gif' width='8' height='8' align='baseline'> <b>Enfermeros de turno:</b>";
+  echo $row['enfermeros_turno'] . "<br>\n";
+  echo "<img src='images/bullet.gif' width='8' height='8' align='baseline'> <b>Enfermero actuante:</b> &nbsp;";	
+  echo $row['enfermero_actuante'] . "<br>\n";
+}
+
+?>
+
+</div>
+</body>
+</html>

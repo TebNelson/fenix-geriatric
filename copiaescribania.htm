@@ -1,0 +1,75 @@
+<?php
+ini_set('include_path', $_SERVER['DOCUMENT_ROOT'] . '/inc');
+require_once "errorhand.php";
+require_once "abm.php";
+
+$conn = conectar();
+
+$sql_rtes = "Select * from residentes order by egreso_fecha, apellido";
+$query = mysql_query($sql_rtes, $conn);
+
+$aItems_hc = array("signos_vitales",
+									 "prescripciones",
+									 "familiares",
+                   "evoluciones", 
+									 "informes_sociales",
+									 "semestrales_clínica_médica", 
+									 "semestrales_psiquiatría",
+									 "semestrales_nutrición",
+									 "semestrales_trabajo_social",
+									 "semestrales_enfermería",
+									 "semestrales_kinesiología",
+									 "semestrales_recreación",
+									 "interconsultas",
+									 "visitas",
+									 "epicrisis");
+
+echo "<html><head></head><body style='margin-left:55 px'>";
+echo "<h1 style='text-align:center'>Historias médicas sociales unicas<hr></h1>";
+
+$z=1;
+
+while($residentes = mysql_fetch_array($query, 1)){ # por cada residente
+
+	# sql prescipciones
+	$sql_prescripciones = "select concat(m.medicamento, ' ', pm.presentación, ' ', pm.dosis) as medicación, p.regular, p.desde, ".
+				 "p.hasta, p.días, p.horarios, p.vía, p.observaciones, p.prescripto_por, pc.médico_actuante as cancelada_por, ".
+				 "pc.motivo as motivo_de_cancelación, pc.observaciones as observaciones_cancelación from prescripciones as p ".
+				 "inner join presentaciones_medicamentos as pm on p.id_presentación_medicamento = pm.id inner join medicamentos as m " .
+				 "on pm.id_medicamento = m.id left join prescripciones_canceladas as pc on p.id = pc.id_prescripción ".
+				 "where p.hc = ".$residentes['hc'] ."  order by p.id;";
+
+	echo "<h2 style='text-decoration: underline'>$z. " . $residentes['apellido'] . ', '. $residentes['nombre'] . "</h2>\n";
+	echo "<h3  style='text-decoration: underline'> $z.1 Datos personales (anamnesis):</h3>";
+
+	while(list($k, $v)= each ($residentes)){
+		echo "<b>$k :</b> $v <br>\n "; 
+	}
+
+	for ($i=0; $i <count($aItems_hc) ; $i++){ # por cada elemento de la hsitoria clínica de un array
+		if ($aItems_hc[$i] == "prescripciones") {
+			$sql_evol = $sql_prescripciones;
+		} else {
+			$sql_evol = "Select * from ". $aItems_hc[$i] ." where hc= ". $residentes['hc'] ." order by id;";
+		}
+		$query_evols = mysql_query($sql_evol, $conn);
+		echo "<h3 style='text-decoration: underline'>". $z . '.' . ($i + 2) . ' ' .  ucfirst(str_replace("_", " ", $aItems_hc[$i] )) .":</h3>";
+		echo "<blockquote style='border-color: #CCCCCC; border-style:dotted; border-width:1; border-spacing:3 px'>\n";
+		$y=1;
+		while($datos = mysql_fetch_array($query_evols, 1)){ # por cada campo del elemento de hsitoria clinica
+			echo "<p style='font-weight:bold; text-decoration:underline'>Registro $z.". ($i + 2) .".$y - ".$aItems_hc[$i]." </p><p>\n";
+			while(list($k, $v)= each ($datos)){
+				echo "<b>". ucfirst (str_replace ("_", " ",$k)) . " :</b> $v <br/>\n"; 
+			}
+			$y++;
+			echo "</p><hr>";
+		}
+		echo "</blockquote>";
+	}
+$z++;
+echo "<p>*********************************************************************************************<br>";
+echo "*********************************************************************************************</p>";
+}
+echo "</body></html>";
+
+?>

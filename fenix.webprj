@@ -1,0 +1,175 @@
+<!DOCTYPE webproject>
+<webproject>
+  <project usePreviewPrefix="0" previewPrefix="" type="Local" name="Fenix" encoding="iso 8859-1" >
+    <upload/>
+    <author>Esteban Gómez</author>
+    <email>estebang@logosnet.com.ar</email>
+    <defaultDTD>-//W3C//DTD HTML 4.01 Transitional//EN</defaultDTD>
+    <item url="" uploadstatus="1" />
+    <item url="actividades/" uploadstatus="1" />
+    <item url="actividades/agendar.php" uploadstatus="1" />
+    <item url="actividades/cronograma.php" uploadstatus="1" />
+    <item url="actividades/editar.php" uploadstatus="1" />
+    <item url="bkps/" uploadstatus="1" />
+    <item modified_time="1161261994" url="bkps/copiahmsu.php" uploadstatus="1" />
+    <item modified_time="1161262264" url="bkps/copia-reportes-enfermeria.php" uploadstatus="1" />
+    <item url="bkps/descargarbkp.php" uploadstatus="1" />
+    <item modified_time="1161257296" url="bkps/hacer-bkp.php" uploadstatus="1" />
+    <item url="consultas/" uploadstatus="1" />
+    <item url="consultas/aevol.php" uploadstatus="1" />
+    <item modified_time="1161089439" url="consultas/habitaciones.php" uploadstatus="1" />
+    <item url="consultas/info.php" uploadstatus="1" />
+    <item modified_time="1161215823" url="consultas/infpres.php" uploadstatus="1" />
+    <item url="consultas/ingresos.php" uploadstatus="1" />
+    <item url="consultas/interconsultas.php" uploadstatus="1" />
+    <item modified_time="1161089534" url="consultas/listadoresidentes.php" uploadstatus="1" />
+    <item modified_time="1160962359" url="consultas/nuevasprescripciones.php" uploadstatus="1" />
+    <item url="consultas/reportesemestrales.php" uploadstatus="1" />
+    <item modified_time="1161089823" url="consultas/rtes-pami.php" uploadstatus="1" />
+    <item url="ctas-ctes/" uploadstatus="1" />
+    <item modified_time="1161034556" url="ctas-ctes/creditos.php" uploadstatus="1" />
+    <item modified_time="1161035360" url="ctas-ctes/ctas-ctes.php" uploadstatus="1" />
+    <item modified_time="1161034523" url="ctas-ctes/debitos.php" uploadstatus="1" />
+    <item modified_time="1161091783" url="ctas-ctes/listasaldos.php" uploadstatus="1" />
+    <item url="estilos/" uploadstatus="1" />
+    <item modified_time="1161219686" url="estilos/estilos.css" uploadstatus="1" />
+    <item url="fotos/" uploadstatus="1" />
+    <item url="fotos/10.jpg" uploadstatus="1" />
+    <item url="fotos/12.jpg" uploadstatus="1" />
+    <item url="fotos/2.jpg" uploadstatus="1" />
+    <item url="fotos/6.jpg" uploadstatus="1" />
+    <item url="fotos/8.jpg" uploadstatus="1" />
+    <item url="fotos/9.jpg" uploadstatus="1" />
+    <item url="help/" uploadstatus="1" />
+    <item modified_time="1161009396" url="help/derecha.php" uploadstatus="1" />
+    <item modified_time="1161009997" url="help/izquierda.php" uploadstatus="1" />
+    <item modified_time="1160956637" url="help/marco.php" uploadstatus="1" />
+    <item url="help/titulo.php" uploadstatus="1" />
+    <item url="images/" uploadstatus="1" />
+    <item url="images/addressGo.gif" uploadstatus="1" />
+    <item url="images/bluearrow.gif" uploadstatus="1" />
+    <item url="images/bot_cancelar.gif" uploadstatus="1" />
+    <item url="images/bot_detalles.gif" uploadstatus="1" />
+    <item url="images/bot_modificar.gif" uploadstatus="1" />
+    <item url="images/bullet.gif" uploadstatus="1" />
+    <item url="images/captura-hmsu.jpg" uploadstatus="1" />
+    <item url="images/captura-principal.jpg" uploadstatus="1" />
+    <item url="images/close.gif" uploadstatus="1" />
+    <item url="images/date_d.gif" uploadstatus="1" />
+    <item url="images/delete.bmp" uploadstatus="1" />
+    <item url="images/directional.gif" uploadstatus="1" />
+    <item url="images/help.jpg" uploadstatus="1" />
+    <item url="images/hmsu.png" uploadstatus="1" />
+    <item url="images/home.gif" uploadstatus="1" />
+    <item url="images/logo-internet.png" uploadstatus="1" />
+    <item url="images/mail.gif" uploadstatus="1" />
+    <item url="images/mail_new.gif" uploadstatus="1" />
+    <item url="images/mensajes.png" uploadstatus="1" />
+    <item url="images/permisos.png" uploadstatus="1" />
+    <item url="images/plano.jpg" uploadstatus="1" />
+    <item url="images/right-ar.gif" uploadstatus="1" />
+    <item url="images/SendChat.gif" uploadstatus="1" />
+    <item url="images/warning.gif" uploadstatus="1" />
+    <item url="inc/" uploadstatus="1" />
+    <item modified_time="1161259815" url="inc/abm.php" uploadstatus="1" />
+    <item url="inc/camposPredef.php" uploadstatus="1" />
+    <item modified_time="1161254657" url="inc/colder.php" uploadstatus="1" />
+    <item modified_time="1161254501" url="inc/colizq.php" uploadstatus="1" />
+    <item modified_time="1160958929" url="inc/const.php" uploadstatus="1" />
+    <item modified_time="1160956071" url="inc/control_login.php" uploadstatus="1" />
+    <item modified_time="1160954903" url="inc/errorhand.php" uploadstatus="1" />
+    <item modified_time="1161093048" url="inc/error-volver.php" uploadstatus="1" />
+    <item url="inc/fechadmy.php" uploadstatus="1" />
+    <item modified_time="1160618781" url="inc/getformins.php" uploadstatus="1" />
+    <item url="inc/getformread.php" uploadstatus="1" />
+    <item url="inc/getformupd.php" uploadstatus="1" />
+    <item modified_time="1161270590" url="inc/grid.php" uploadstatus="1" />
+    <item url="inc/gridvert.php" uploadstatus="1" />
+    <item modified_time="1160954855" url="inc/headers.php" uploadstatus="1" />
+    <item url="inc/ifexist.php" uploadstatus="1" />
+    <item url="inc/Insert.php" uploadstatus="1" />
+    <item url="inc/isdate.php" uploadstatus="1" />
+    <item url="inc/isDateServer.php" uploadstatus="1" />
+    <item url="inc/lista.php" uploadstatus="1" />
+    <item modified_time="1161263475" url="inc/login.php" uploadstatus="1" />
+    <item modified_time="1160618781" url="inc/makeclientvalidate.php" uploadstatus="1" />
+    <item modified_time="1161213976" url="inc/makefield.php" uploadstatus="1" />
+    <item url="inc/newsesion.php" uploadstatus="1" />
+    <item url="inc/permisos.php" uploadstatus="1" />
+    <item modified_time="1160618781" url="inc/selectfromnum.php" uploadstatus="1" />
+    <item modified_time="1161256894" url="inc/selecthtml.php" uploadstatus="1" />
+    <item url="inc/selectresidentes.php" uploadstatus="1" />
+    <item url="inc/update.php" uploadstatus="1" />
+    <item url="js/" uploadstatus="1" />
+    <item url="js/coolmenus3.js" uploadstatus="1" />
+    <item url="js/menuBajas.js" uploadstatus="1" />
+    <item url="js/menuHCResidentes.js" uploadstatus="1" />
+    <item modified_time="1160957751" url="js/sto.js" uploadstatus="1" />
+    <item url="log/" uploadstatus="1" />
+    <item modified_time="1161273007" url="log/error.txt" uploadstatus="1" />
+    <item url="log/registros.txt" uploadstatus="1" />
+    <item url="log/respaldo.bkp" uploadstatus="1" />
+    <item url="log/ultimacopiahmsu.txt" uploadstatus="1" />
+    <item url="log/ultima-copia-report-enfermeria.txt" uploadstatus="1" />
+    <item url="medicacion/" uploadstatus="1" />
+    <item url="medicacion/agregarmedic.php" uploadstatus="1" />
+    <item modified_time="1161218926" url="medicacion/demanda.php" uploadstatus="1" />
+    <item modified_time="1161218719" url="medicacion/medicamentos.php" uploadstatus="1" />
+    <item url="mensajes/" uploadstatus="1" />
+    <item modified_time="1160960830" url="mensajes/cuerpomensaje.php" uploadstatus="1" />
+    <item modified_time="1161008665" url="mensajes/enviar.php" uploadstatus="1" />
+    <item modified_time="1161254714" url="mensajes/recep.php" uploadstatus="1" />
+    <item url="nueva-prescripcion/" uploadstatus="1" />
+    <item url="nueva-prescripcion/calendario.htm" uploadstatus="1" />
+    <item modified_time="1160618781" url="nueva-prescripcion/cancelprescrip.php" uploadstatus="1" />
+    <item url="nueva-prescripcion/condicion.php" uploadstatus="1" />
+    <item url="nueva-prescripcion/confirmar.php" uploadstatus="1" />
+    <item url="nueva-prescripcion/dias.php" uploadstatus="1" />
+    <item url="nueva-prescripcion/endok.php" uploadstatus="1" />
+    <item url="nueva-prescripcion/horadosis.php" uploadstatus="1" />
+    <item modified_time="1160618781" url="nueva-prescripcion/nuevaprescripcion.php" uploadstatus="1" />
+    <item modified_time="1161269714" url="nueva-prescripcion/plazo.php" uploadstatus="1" />
+    <item modified_time="1161093266" url="nueva-prescripcion/validar-hc-area.php" uploadstatus="1" />
+    <item url="about.htm" uploadstatus="1" />
+    <item url="altaresidente.php" uploadstatus="1" />
+    <item modified_time="1161273697" url="altas.php" uploadstatus="1" />
+    <item modified_time="1161028129" url="bajas.php" uploadstatus="1" />
+    <item url="capturas.php" uploadstatus="1" />
+    <item modified_time="1161219069" url="cerrarsesion.php" uploadstatus="1" />
+    <item url="contacto-online.php" uploadstatus="1" />
+    <item url="copiaescribania.htm" uploadstatus="1" />
+    <item url="editdp.php" uploadstatus="1" />
+    <item url="editepicrisis.php" uploadstatus="1" />
+    <item url="editfliar.php" uploadstatus="1" />
+    <item url="fenix.sql" uploadstatus="1" />
+    <item url="fenix.webprj" uploadstatus="1" />
+    <item modified_time="1161096048" url="index.php" uploadstatus="1" />
+    <item url="licencia.htm" uploadstatus="1" />
+    <item modified_time="1161254617" url="nuevas-prescripciones.php" uploadstatus="1" />
+    <item modified_time="1161254201" url="principal.php" uploadstatus="1" />
+    <item modified_time="1161213261" url="repenfadd.php" uploadstatus="1" />
+    <item modified_time="1161215612" url="reportenf.php" uploadstatus="1" />
+    <item modified_time="1161272651" url="residente.php" uploadstatus="1" />
+    <item url="salirlogin.php" uploadstatus="1" />
+    <item modified_time="1161272956" url="sintesis-hmsu-rte.php" uploadstatus="1" />
+    <item url="temp.php" uploadstatus="1" />
+    <item modified_time="1161088367" url="upldfoto.php" uploadstatus="1" />
+    <item modified_time="1161088586" url="upldplano.php" uploadstatus="1" />
+    <item modified_time="1161257023" url="usr-acciones.php" uploadstatus="1" />
+    <item url="usr-add.php" uploadstatus="1" />
+    <item modified_time="1161254862" url="usr-audit.php" uploadstatus="1" />
+    <item modified_time="1160618781" url="usr-cmb-pass.php" uploadstatus="1" />
+    <item url="usr-edit.php" uploadstatus="1" />
+    <item modified_time="1161219499" url="usr-list.php" uploadstatus="1" />
+    <item modified_time="1161219328" url="usr-pwd.php" uploadstatus="1" />
+    <templates>templates/</templates>
+    <toolbars>toolbars/</toolbars>
+    <projectview name="personal_eg" >
+      <viewitem url="log/error.txt" />
+      <viewitem url="reportenf.php" />
+    </projectview>
+    <treestatus>
+      <openfolder url="inc" />
+    </treestatus>
+  </project>
+</webproject>
